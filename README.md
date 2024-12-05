@@ -3,5 +3,9 @@ In this repository I will push all the assignments from the training program (fu
 
 # Gaided labs
 1. [Core Java:](https://github.com/noor188/303.2-GLAB) 303.2.1 (Operators) & 303.2.2 (Type Casting)
-2. [Control Flow: ](https://github.com/noor188/GLAB-303.5) 303.5.1 (for loop) & 303.5.2 (while loop) & 303.6.1 (Array) 
+2. [Control Flow: ](https://github.com/noor188/GLAB-303.5) 303.5.1 (for loop) & 303.5.2 (while loop) & 303.6.1 (Array)
+
+
+# Projects 
+1. [Student: ](https://github.com/noor188/Student)  Abstract class / interface
 
