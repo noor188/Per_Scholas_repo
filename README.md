@@ -1,4 +1,4 @@
-# Full stack Java development Program
+# Java Full stack development Program
 15 weeks of instructor-led training in Java, CSS, HTML, Web Development, Front-End Development, Back-end Development, Database Management System (DBMS), Object-Relational Mapping (ORM), web application architectures, JUnit, SQL and CRUD 
 
 In this repository I will push all the assignments from the training program (full stack Java developer) at per scholas
