@@ -1,5 +1,5 @@
 # Java Full stack development Program
-15 weeks of instructor-led training in Java, CSS, HTML, Web Development, Front-End Development, Back-end Development, Database Management System (DBMS), Object-Relational Mapping (ORM), web application architectures, JUnit, SQL and CRUD 
+15 weeks of instructor-led training in:Java, CSS, HTML, Web Development, Front-End Development, Back-end Development, Database Management System (DBMS), Object-Relational Mapping (ORM), web application architectures, JUnit, SQL and CRUD 
 
 In this repository I will push all the assignments from the training program (full stack Java developer) at per scholas
 
@@ -9,5 +9,5 @@ In this repository I will push all the assignments from the training program (fu
 
 
 # Projects 
-1. [Student: ](https://github.com/noor188/Student)  Abstract class / interface
-
+1. Abstract class / interface: [Student](https://github.com/noor188/Student)
+2. Inheritance: [Employee](https://github.com/noor188/Student) 
