@@ -11,4 +11,5 @@ In this repository I will push all the assignments from the training program (fu
 
 # Projects 
 1. Abstract class / interface: [Student](https://github.com/noor188/Student)
-2. Inheritance: [Employee](https://github.com/noor188/Student) 
+2. Inheritance: [Employee](https://github.com/noor188/Student)
+3. Generics: [Employee](https://github.com/noor188/Generics-303.11) 
