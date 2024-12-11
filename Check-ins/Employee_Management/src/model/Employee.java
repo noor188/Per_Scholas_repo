@@ -26,17 +26,35 @@ public class Employee {
     }
 
     public void display(){
-        System.out.println("Employee: " + firstName + " " + lastName);
-        System.out.println("Title: " + title);
+        System.out.print("\nEmployee: " + firstName + " " + lastName);
+        System.out.println(", Title: " + title);
     }
 
-    public void inputEmployee(){
+    public Employee inputEmployee(){
+        System.out.print("Enter employee type (salaried/hourly): ");
+        String empType = sc.nextLine();
         System.out.print("Enter first name: ");
-        this.firstName = sc.nextLine();
-        System.out.print("Enter last name:");
-        this.lastName = sc.nextLine();
+        String firstName = sc.nextLine();
+        System.out.print("Enter last name: ");
+        String lastName = sc.nextLine();
         System.out.print("Enter title: ");
-        this.title = sc.nextLine();
+        String title = sc.nextLine();
+        Employee emp = null;
+
+        switch(empType){
+            case "salaried":
+                emp = new SalaryEmp();
+                emp.inputEmployee();
+                break;
+            case "hourly":
+                emp = new HourlyEmp();
+                emp.inputEmployee();
+                break;
+        }
+        emp.firstName = firstName;
+        emp.lastName = lastName;
+        emp.title = title;
+        return emp;
     }
 
     @Override
@@ -56,15 +74,6 @@ public class Employee {
         Employee emp = (Employee) o;
         return Double.compare(this.payRate, emp.payRate) == 0 && Objects.equals(firstName, emp.firstName)  && Objects.equals(lastName, emp.lastName)  && Objects.equals(title, emp.title);
     }
-
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Employee employee = (Employee) o;
-//        return Double.compare(payRate, employee.payRate) == 0 && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(title, employee.title);
-//    }
 
     @Override
     public int hashCode() {
