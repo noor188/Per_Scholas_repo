@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Check-ins.iml" filepath="$PROJECT_DIR$/.idea/Check-ins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Employee_Management/Employee_Management.iml" filepath="$PROJECT_DIR$/Employee_Management/Employee_Management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Employment/Employment.iml" filepath="$PROJECT_DIR$/Employment/Employment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics/Generics.iml" filepath="$PROJECT_DIR$/Generics/Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String Methods Check-In/String Methods Check-In.iml" filepath="$PROJECT_DIR$/String Methods Check-In/String Methods Check-In.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Student/Student.iml" filepath="$PROJECT_DIR$/Student/Student.iml" />
+    </modules>
+  </component>
+</project>
