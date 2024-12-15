@@ -1,40 +1,29 @@
 package model;
-import Abstract.Person;
-import Interface.Studyable;
-
+import interfaces.studyable;
+import abstracts.Person;
 import java.util.Scanner;
 
-public class Student extends Person implements Studyable {
+public class Student extends Person implements studyable {
 
     private String major;
+    Scanner input = new Scanner(System.in);
 
-    public Student() {}
-    public Student(String firstName, String lastName, int age) {
+    public Student(String firstName, String lastName, int age, String major){
         super(firstName, lastName, age);
-        this.major = "";
-    }
-
-    @Override
-    public void displayPersonDetails() {
-        System.out.println("Name: "+ fullName());
-        System.out.println("Age: "+ age);
-        System.out.println("Major: "+ major);
-        System.out.println(firstname+ " " + lastname + " is studing " + major);
-    }
-
-    @Override
-    public void inputClassDescription() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Please provide your major: ");
-        this.major = sc.nextLine();
-    }
-
-    public String getMajor() {
-        return major;
-    }
-
-    public void setMajor(String major) {
         this.major = major;
+    }
+
+    @Override
+    public void display(){
+        System.out.println("Name: " + super.getFullName());
+        System.out.println("Age: " + super.getAge());
+        System.out.println("Major:" + this.major);
+        this.displayMajor();
+       }
+
+    @Override
+    public void displayMajor(){
+        System.out.println(super.getFullName() + " is studying " + this.major);
     }
 
 }
