@@ -1,5 +1,14 @@
 # Java Full stack development Program
-15 weeks of instructor-led training in:Java, CSS, HTML, Web Development, Front-End Development, Back-end Development, Database Management System (DBMS), Object-Relational Mapping (ORM), web application architectures, JUnit, SQL and CRUD 
+15 weeks of instructor-led training in:
+
+1. Programming Languages: Java, SQL
+2. Web Development:
+     1. Front-End Development: CSS, HTML
+     2. Back-End Development: Object-Relational Mapping (ORM), Database Management System (DBMS), SQL, CRUD, Web Application Architectures
+3. Frameworks and Tools: JUnit (testing framework for Java)
+4. Core Concepts:
+      1. Database Management: Database Management System (DBMS), SQL and CRUD, Object-Relational Mapping (ORM)
+      2. Web Application Architectures: Designing and implementing modern web applications
 
 In this repository I will push all the assignments from the training program (full stack Java developer) at per scholas
 
