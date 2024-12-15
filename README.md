@@ -10,7 +10,7 @@ In this repository I will push all the assignments from the training program (fu
 4. [HashSet and TreeSet Processing: ](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/303.11.5-HashSet-and-TreeSet)
 
 
-# Projects 
+# Check-in Projects 
 1. Abstract class / interface: [Student](https://github.com/noor188/Student)
 2. Inheritance: [Employee](https://github.com/noor188/Employee-Managment)
 3. Generics: [Employee](https://github.com/noor188/Generics-303.11) 
