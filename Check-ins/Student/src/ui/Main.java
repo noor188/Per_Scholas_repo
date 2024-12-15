@@ -1,24 +1,18 @@
 package ui;
 import model.Student;
 
-import java.sql.SQLOutput;
+import java.util.Comparator;
+import java.util.HashSet;
+import  java.util.Iterator;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
+        Student s0 = new Student("Alice", "Johnson", 20, "Computer Science");
+        Student s1 = new Student("Bob", "Smith", 22, "Mathematics");
 
-        Student student1 = new Student("Alice" , "Johnson", 20);
-        student1.inputClassDescription();
-        student1.displayPersonDetails();
-
-        System.out.println();
-
-        Student student2 = new Student("Bob" , "Smith", 22);
-        student2.inputClassDescription();
-        student2.displayPersonDetails();
-
-
-
-
+        s0.display();
+        s1.display();
 
     }
 }
