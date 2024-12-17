@@ -25,4 +25,4 @@ In this repository I will push all the assignments from the training program (fu
 1. Inheritance: [Employee](https://github.com/noor188/Employee-Managment)
 2. Abstract class / interface: [Student](https://github.com/noor188/Student)
 3. Generics: [Employee](https://github.com/noor188/Generics-303.11)
-4. Exceptions & java IO package: [WeatherAppLab](https://github.com/noor188/Per_Scholas_repo/tree/main/Check-ins/WeatherAppLab)
+4. Exceptions & java IO package: [WeatherAppLab](https://github.com/noor188/Weather-app-lab)
