@@ -5,7 +5,6 @@ public class Main {
 
         // part 1
         // Invoke the method to process the weather file
-        //        String path = "C:\\Users\\User\\Desktop\\Noor\\per-scholas\\repo\\Check-ins\\WeatherAppLab\\weather.txt";
         //        w0.processWeatherFile(path);
 
         //
