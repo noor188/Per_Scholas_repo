@@ -1,2 +1,7 @@
+Monday: Sunny
+Tuesday: Rainy
+Wednesday: Cloudy
+Thursday: Windy
+Friday: Snowy
 Saturday: Foggy
 Sunday: Rainy

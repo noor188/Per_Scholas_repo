@@ -47,7 +47,7 @@ public class WeatherReader {
             this.readFile(file);
             this.readFileAsBytes(filePath);
             // Step extra: write to the file
-            this.writeFileAsBytes(filePath, "Saturday: Foggy\nSunday: Rainy" );
+            this.writeFileAsBytes(filePath, "Saturday: Foggy\nSunday: Rainy");
             // Step extra: read the file
             this.readFile(file);
         } catch (WeatherFileNotFoundException e) {
@@ -80,7 +80,7 @@ public class WeatherReader {
     //Make sure to include the IOException and printStackTrace() in the catch block.
     public void writeFileAsBytes(String filePath, String content) {
         try {
-            FileOutputStream fout = new FileOutputStream(filePath, false);
+            FileOutputStream fout = new FileOutputStream(filePath, true);
             System.out.println("\n \nContent written to file successfully as bytes.");
             for(int i =0  ; i < content.length(); i++){
                 fout.write((int) content.charAt(i));
