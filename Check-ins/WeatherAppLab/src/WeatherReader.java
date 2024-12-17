@@ -81,7 +81,7 @@ public class WeatherReader {
     //Make sure to include the IOException and printStackTrace() in the catch block.
     public void writeFileAsBytes(String filePath, String content) {
         try {
-            FileOutputStream fout = new FileOutputStream(filePath, true);
+            FileOutputStream fout = new FileOutputStream(filePath, false);
             System.out.println("\n \nContent written to file successfully as bytes.");
             for(int i =0  ; i < content.length(); i++){
                 fout.write((int) content.charAt(i));
