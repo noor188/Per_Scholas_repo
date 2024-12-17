@@ -47,8 +47,7 @@ public class WeatherReader {
             this.readFile(file);
             this.readFileAsBytes(filePath);
             // Step extra: write to the file
-            this.writeFileAsBytes(filePath, "Saturday: Foggy\n" );
-            this.writeFileAsBytes(filePath, "Sunday: Rainy" );
+            this.writeFileAsBytes(filePath, "Saturday: Foggy\nSunday: Rainy" );
             // Step extra: read the file
             this.readFile(file);
         } catch (WeatherFileNotFoundException e) {
