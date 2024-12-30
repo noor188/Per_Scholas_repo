@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.function.BiFunction;
+
 public class Main {
     public static void main(String[] args) {
 // Create a WeatherReader object
@@ -8,9 +11,9 @@ public class Main {
         //        w0.processWeatherFile(path);
 
         //
-        WeatherReader w1 = new WeatherReader();
-        String path = w1.getFileNameFromUser();
-        w1.processWeatherFile(path);
-
+//        WeatherReader w1 = new WeatherReader();
+//        String path = w1.getFileNameFromUser();
+//        w1.processWeatherFile(path);
+        
     }
 }
