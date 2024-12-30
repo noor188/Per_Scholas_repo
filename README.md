@@ -17,8 +17,10 @@ In this repository I will push all the assignments from the training program (fu
  # 1. 303: Java
 1. [303.2 - Core Java:](https://github.com/noor188/303.2-GLAB) 303.2.1 (Operators) & 303.2.2 (Type Casting)
 2. [303.5 & 303.6 - Control Flow: ](https://github.com/noor188/GLAB-303.5) 303.5.1 (for loop) & 303.5.2 (while loop) & 303.6.1 (Array)
-3. [Polymorphism, Object Type casting, Abstraction, interfaces: ](https://github.com/noor188/GLAB-303.10)
+3. [303.10 Polymorphism, Object Type casting, Abstraction, interfaces: ](https://github.com/noor188/GLAB-303.10)
 4. [303.11 - HashSet and TreeSet Processing](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/303.11.5-HashSet-and-TreeSet)
+5. [303.11.7 Phone-Directory](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/Phone-Directory)
+6. [303.13.2 - NIO](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/NIO)
 
 
 # Check-in Projects 
