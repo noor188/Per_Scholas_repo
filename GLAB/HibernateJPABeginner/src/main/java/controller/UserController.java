@@ -1,10 +1,13 @@
 package controller;
 
+import jakarta.persistence.TypedQuery;
 import model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+
+import java.util.List;
 
 public class UserController {
     public static void main(String[] args) {
@@ -16,7 +19,13 @@ public class UserController {
       //  addUser(factory, session);
         //  findUser(factory,  session, 1);
       //  updateUser(session, 2);
-        deleteUser(session, 2);
+      //  deleteUser(session, 2);
+      //  findUserHql(factory, session);
+        //getRecordbyId(factory, session);
+        //getRecords(factory, session);
+       // getMaxSalary(factory, session);
+       // getMaxSalaryGroupBy(factory, session);
+        namedQueryExample(factory, session);
     }
 
     public static void addUser(SessionFactory factory, Session session){
@@ -98,5 +107,92 @@ public class UserController {
         session.delete(u);
         session.getTransaction().commit();
         session.close();
+    }
+
+    public static void findUserHql(SessionFactory factory,Session session){
+
+        Transaction tx = session.beginTransaction();
+        //String hql = "FROM User";
+        String selectHQL = "SELECT u from User u";
+        TypedQuery<User> query = session.createQuery(selectHQL, User.class);
+        List<User> users =  query.getResultList();
+
+        System.out.printf("%s%13s%17s%34s%n", "|User Id","|Full name","|Email","|Password");
+        for (User u : users){
+            System.out.printf(" %-10d %-20s %-30s %s %n", u.getId(), u.getFullname(), u.getEmail(), u.getPassword());
+        }
+
+        tx.commit();
+    }
+
+    public static void getRecordbyId(SessionFactory factory,Session session){
+        Transaction tx = session.beginTransaction();
+
+        String hql = "FROM User u WHERE u.id > 1 ORDER BY u.salary DESC";
+        TypedQuery<User> query = session.createQuery(hql, User.class);
+        List<User> users = query.getResultList();
+
+        System.out.printf("%s%13s%17s%34s%21s%n", "|User Id", "|Full name", "|Email", "|Password", "|Salary");
+        for(User u : users){
+            System.out.printf("%-10d %-20s %-30s %-23s %s %n", u.getId(), u.getFullname(), u.getEmail(), u.getPassword(), u.getSalary());
+        }
+
+        tx.commit();
+    }
+
+    public static void getRecords(SessionFactory factory, Session session){
+
+        Transaction tx = session.beginTransaction();
+        String hql = "SELECT u.salary, u.fullname FROM User u";
+        TypedQuery<Object[]> query = session.createQuery(hql,Object[].class);
+        List<Object[]> users = query.getResultList();
+
+        System.out.printf("%s%13s%n", "|Full name", "|Salary");
+        for(Object[] user : users){
+            System.out.printf("%-20s %s %n", user[0], user[1]);
+        }
+        tx.commit();
+    }
+
+    public static void getMaxSalary(SessionFactory factory, Session session){
+
+        Transaction tx = session.beginTransaction();
+
+        String hql = "SELECT MAX(u.salary) FROM User u";
+        TypedQuery<Object> query = session.createQuery(hql, Object.class);
+        Object result = query.getSingleResult();
+        System.out.printf("%s%s", "Max result: " , result);
+        tx.commit();
+    }
+
+    public static void getMaxSalaryGroupBy(SessionFactory factory, Session session){
+        Transaction tx = session.beginTransaction();
+
+        String hql = "SELECT SUM(u.salary), u.city FROM User u GROUP BY u.city";
+        TypedQuery<Object[]> query = session.createQuery(hql, Object[].class);
+        List<Object[]> users = query.getResultList();
+        System.out.printf("%s%13s%n", "|Sum Salary", "|City");
+
+        for(Object[] user : users){
+            System.out.printf("%s%12s%n", user[0], user[1]);
+        }
+
+        tx.commit();
+    }
+
+    public static void namedQueryExample(SessionFactory factory, Session session){
+        Transaction tx = session.beginTransaction();
+
+        String hql = "FROM User u WHERE u.id = :id";
+        TypedQuery<User> query = session.createQuery(hql, User.class);
+        query.setParameter("id", 1);
+        List<User> users = query.getResultList();
+
+        System.out.printf("%s%13s%n", "| User Id ", "|Email");
+        for (User user: users){
+            System.out.printf("%-20d %-10s %n", user.getId(), user.getEmail());
+        }
+
+        tx.commit();
     }
 }
