@@ -33,6 +33,7 @@ In this repository I will push all the assignments from the training program (fu
 # Maven, JDBS, Hibernate
 1. [305.2 - JDBC - PreparedStatement with DML and DDL](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/305.2-JDBC)
 2. [305.3 - Building Java CRUD application using DAO pattern, OOP concept and JDBC](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/305.3-CRUD)
+3. [305.5.1 & 305.5.2 & 305.5.3 - Relationships and mapping](https://github.com/noor188/Per_Scholas_repo/tree/main/GLAB/HibernateMapping)
    
 
 # Check-in Projects 
