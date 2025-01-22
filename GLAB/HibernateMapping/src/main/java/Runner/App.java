@@ -1,6 +1,7 @@
 package Runner;
 
 import model.Address;
+import model.Cohort;
 import model.Department;
 import model.Teacher;
 import org.hibernate.Session;
@@ -10,12 +11,15 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
 
 public class App {
     public static void main(String[] args) {
         //manyToOne();
         //oneToMany();
-        oneToOne();
+        //oneToOne();
+        manyToMany();
     }
 
     public static void manyToOne(){
@@ -54,32 +58,32 @@ public class App {
 
         Transaction tx = session.beginTransaction();
 
-        Teacher t1 = new Teacher("1000","MHaseeb");
-        Teacher t2 = new Teacher("2220","Shahparan");
-        Teacher t3 = new Teacher("3000","James");
-        Teacher t4 = new Teacher("40000","Joseph");
-        Teacher t5 = new Teacher("200","Ali");
-
-
-        List<Teacher> teacherList = new ArrayList<Teacher>();
-        teacherList.add(t1);
-        teacherList.add(t2);
-        teacherList.add(t3);
-
-        List<Teacher> teacherList1 = new ArrayList<>();
-        teacherList1.add(t4);
-        teacherList1.add(t5);
-
-        session.persist(t1);
-        session.persist(t2);
-        session.persist(t3);
-        session.persist(t4);
-        session.persist(t5);
-
-        Department d1 = new Department("Development");
-       // d1.setTeacherList(teacherList1);
-
-        session.persist(d1);
+//        Teacher t1 = new Teacher("1000","MHaseeb");
+//        Teacher t2 = new Teacher("2220","Shahparan");
+//        Teacher t3 = new Teacher("3000","James");
+//        Teacher t4 = new Teacher("40000","Joseph");
+//        Teacher t5 = new Teacher("200","Ali");
+//
+//
+//        List<Teacher> teacherList = new ArrayList<Teacher>();
+//        teacherList.add(t1);
+//        teacherList.add(t2);
+//        teacherList.add(t3);
+//
+//        List<Teacher> teacherList1 = new ArrayList<>();
+//        teacherList1.add(t4);
+//        teacherList1.add(t5);
+//
+//        session.persist(t1);
+//        session.persist(t2);
+//        session.persist(t3);
+//        session.persist(t4);
+//        session.persist(t5);
+//
+//        Department d1 = new Department("Development");
+//       // d1.setTeacherList(teacherList1);
+//
+//        session.persist(d1);
         tx.commit();
         factory.close();
         session.close();
@@ -126,6 +130,34 @@ public class App {
         session.persist(e1);
         session.persist(t1);
         session.persist(t2);
+
+        tx.commit();
+        factory.close();
+        session.close();
+    }
+
+    public static void manyToMany(){
+        Configuration config = new Configuration();
+        config.configure();
+
+        SessionFactory factory = config.buildSessionFactory();
+        Session session = factory.openSession();
+
+        Transaction tx = session.beginTransaction();
+
+        Cohort c1 = new Cohort("Per Scholas", "3 mounths");
+        Cohort c2 = new Cohort("flap school", "6 months");
+
+        session.persist(c1);
+        session.persist(c2);
+
+        Set<Cohort> cohortSet = new HashSet<Cohort>();
+        cohortSet.add(c1);
+        cohortSet.add(c2);
+        Teacher t1 = new Teacher("3000", "LaTanya",cohortSet);
+
+
+        session.persist(t1);
 
         tx.commit();
         factory.close();

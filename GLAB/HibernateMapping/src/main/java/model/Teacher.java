@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 public class Teacher implements Serializable {
@@ -23,6 +24,9 @@ public class Teacher implements Serializable {
     @JoinColumn(name="address_id")
     private Address address;
 
+    @ManyToMany
+    private Set<Cohort> cohortList;
+
     public Teacher(){}
 
     public Teacher(int teacherId, String TeacherName, String salary) {
@@ -32,10 +36,11 @@ public class Teacher implements Serializable {
         this.salary = salary;
     }
 
-    public Teacher(String salary, String TeacherName) {
+    public Teacher(String salary, String TeacherName, Set<Cohort> cohortList) {
         super();
         this.salary = salary;
         this.TeacherName = TeacherName;
+        this.cohortList = cohortList;
     }
 
     public Address getAddress() {
@@ -76,5 +81,13 @@ public class Teacher implements Serializable {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public Set<Cohort> getCohortList() {
+        return cohortList;
+    }
+
+    public void setCohortList(Set<Cohort> cohortList) {
+        this.cohortList = cohortList;
     }
 }
