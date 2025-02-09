@@ -44,6 +44,7 @@ In this repository I will push all the assignments from the training program (fu
 4. Exceptions & java IO package: [WeatherAppLab](https://github.com/noor188/Weather-app-lab)
 5. Customer: [Data Access Object pattern](https://)
 6. Hibernate: [Healthcare Management System](https://github.com/noor188/Healthcare_hibernate_1.0.1-)
+7. Core Java, Hibernate, JUnit: [School Management System](https://github.com/noor188/School-Management-System)
 
 # CAP-312---Java-Developer-Capstone-Project
 [link](https://github.com/noor188/CAP-312---Java-Developer-Capstone-Project)
